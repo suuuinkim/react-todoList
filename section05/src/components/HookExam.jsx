@@ -1,0 +1,19 @@
+import { useState } from "react";
+import useInput from "./../hooks/useInput";
+
+// 3가지 hook 관련된 팁
+// 1. 함수 컴포넌트, 커스텀 훅 내부에서만 호출 가능
+// 2. 조건부로 호출될 수는 없다
+// 3. 커스텀할 수 있다
+
+const HookExam = () => {
+  const [input, onChange] = useInput();
+
+  return (
+    <div>
+      <input value={input} onChange={onChange} />
+    </div>
+  );
+};
+
+export default HookExam;
